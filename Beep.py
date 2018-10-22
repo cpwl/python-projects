@@ -13,20 +13,12 @@ def playGame():
         print("Hard luck, the frequency was", playFrequency)
         input()
 
-
-
 name = input("Please enter your name: ")
-i = 1
-while i <= 10:
-    response = input("Do you want to take the estimate the frequency challenge? Enter y or n: ")
-    if response == "y":
-        playGame()
-        i = i + 1
-    else:
-        quit()
+response = input("Do you want to take the estimate the frequency challenge? Enter y or n: ")
 
-input("You have exceeded your estimate limit!")
-quit()
+if response == "y":
+    playGame()
+
 
 
 
