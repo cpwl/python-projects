@@ -11,6 +11,7 @@ def playGame():
         input("You are correct!")
     else:
         print("Hard luck, the frequency was", playFrequency)
+        print("Press enter to continue.")
         input()
 
 name = input("Please enter your name: ")
@@ -18,6 +19,7 @@ response = input("Do you want to take the estimate the frequency challenge? Ente
 
 if response == "y":
     playGame()
+
 
 
 

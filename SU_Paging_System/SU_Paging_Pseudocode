@@ -8,26 +8,21 @@
 
 Program starts - when the Paging function is selected in the till menu
 
-Display a menu
-    Display a menu title
-    Display all staff members currently on shift at the top of the menu (by staffID)
-    Display the staffID of any staff currently being paged
+    1: Display a menu
+        Display a menu title
+        Display all staff members currently on shift at the top of the menu (by staffID)
+        Display the staffID of any staff currently being paged
 
-    1: Allow staff members to page other staff members
+    2: Allow staff members to page other staff members
         - Show a menu of available staff members (by staffID)
         - When a staffID is selected, send an output to page that staff member
         - Return to the main menu, this time displaying the paged staffID at the top
 
-    2: Allow staff members to log into the till
+    3: Allow staff members to log into the till
         - Take the staffID 
         - Validate the staffID against a list of staff members that are clocked in
         - If the staff member is currently being paged, cancel the page
         - Set the specified member of staff to be unavailable for paging (as they are now at the bar)
-
-    3: Allow staff members to log out of the till
-        - Take the staffID
-        - Validate the staffID against a list of staff members that are clocked in
-        - Set the specified member of staff to be unavailable for paging (as they are already at the bar)
 
     4: Allow staff members to clock in to their shift
         - Take the staffID
@@ -66,5 +61,5 @@ Function printMenu(clockedInStaff, availableStaff)
 End Function
 
 Function pageStaff
-
+    
 End Function

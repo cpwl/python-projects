@@ -1,0 +1,69 @@
+[Design Brief]
+It is considered that some speakers, and in particular, some politicians,
+are more self-centred than others.  Design a program that can read in the
+speeches of two different people and count the instances of the words “I”,
+“me”, “mine”, “us” and “we”, “our”. The program should output a count of the
+instances of each of the words and then state which of the two speakers is the more self-centred.
+
+
+
+[Pseudocode]
+Function validateInput(userInput)
+if userInput is an integer
+    if userInput is between 0 and 100
+        Return True
+    else
+        output "Please enter a valid input."
+        Return False
+endif
+
+
+validInput = False
+while validInput = False
+    userInput = input("Please enter your score for the group portfolio: ")
+    validInput = validateInput(userInput)
+end while
+groupPortfolioScore = userInput
+
+while validInput = False
+    validInput = False
+    userInput = input("Please enter your score for the first in-class programming challenge: ")
+    validInput = validateInput(userInput)
+end while
+challenge1Score = userInput
+
+while validInput = False
+    validInput = False
+    userInput = input("Please enter your score for the second in-class programming challenge: ")
+    validInput = validateInput(userInput)
+end while
+challenge2Score = userInput
+
+moduleMark = groupPortfolioScore + challenge1Score + challenge2Score
+moduleMark = moduleMark / 3
+
+
+if moduleMark >= 40 then
+    output "You have passed the module!"
+else if moduleMark < 40 then
+    output "You have failed the module!"
+endif
+
+
+[Testing]
+Test data:
+    "36, 30, 25" - Expected outcome: pass the validation, fail the module
+
+    "50, 64, 85" - Expected outcome: pass the validation, pass the module
+
+    "110" - Expected outcome: fail the validation
+
+    "50.5" - Expected outcome: fail the validation
+
+    "seventy five percent" - Expected outcome: fail the validation
+
+
+[Commentary]
+> We chose to use a user function validateInput() to validate each input as it is a repeated procedure.
+> To scale this design further we would need to ask the user to input the structure of the module marking scheme, then use that input
+to 

@@ -1,11 +1,11 @@
 import random
-import winsound
+#import winsound
 import sys
 
 def playGame():
     print("Ok", name,", I will sound the speaker beep at a particular frequency and you must estimate the frequency.")
     playFrequency = random.randint(37, 8000)
-    winsound.Beep(playFrequency,1)
+    #winsound.Beep(playFrequency,1)
     frequency = input("What frequency do you estimate that sound to have been? ")
     if frequency == playFrequency:
         input("You are correct!")

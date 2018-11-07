@@ -1,0 +1,65 @@
+[Design Brief]
+It is considered that some speakers, and in particular, some politicians, 
+are more self-centred than others.  Design a program that can read in the 
+speeches of two different people and count the instances of the words “I”, 
+“me”, “mine”, “us” and “we”, “our”. The program should output a count of the 
+instances of each of the words and then state which of the two speakers is the 
+more self-centred.
+
+
+[Pseudocode]
+speech1 = input(Please enter the first speech you would like to analyse)
+speech2 = input(Please enter the second speech you would like to analyse)
+
+scanSpeech(speech1)
+scanSpeech(speech2)
+
+output "Speaker one used 'i' " & speech1.iCount & " times."
+output "Speaker one used 'me' " & speech1.meCount & " times."
+output "Speaker one used 'mine' " & speech1.mineCount & " times."
+output "Speaker one used 'us' " & speech1.usCount & " times."
+output "Speaker one used 'we' " & speech1.weCount & " times."
+output "Speaker one used 'our' " & speech1.ourCount & " times."
+output "Speaker two used 'i' " & speech2.iCount & " times."
+output "Speaker two used 'me' " & speech2.meCount & " times."
+output "Speaker two used 'mine' " & speech2.mineCount & " times."
+output "Speaker two used 'us' " & speech2.usCount & " times."
+output "Speaker two used 'we' " & speech2.weCount & " times."
+output "Speaker two used 'our' " & speech2.ourCount & " times."
+
+speaker1Score = speech1.iCount + speech1.meCount + speech1.mineCount + speech1.usCount + speech1.weCount + speech1.ourCount
+
+speaker2Score = speech2.iCount + speech2.meCount + speech2.mineCount + speech2.usCount + weCount + ourCount
+
+
+
+Function scanString(string, phrase, count)
+    for every phrase in string
+        output = output + 1
+    loop
+
+Procedure scanSpeech (speech)
+    speech.iCount = integer
+    speech.meCount = integer
+    speech.mineCount = integer
+    speech.usCount = integer
+    speech.weCount = integer
+    speech.ourCount = integer
+
+    scanString(speech, "i", iCount)
+    scanString(speech, "me", meCount)
+    scanString(speech, "mine", mineCount)
+    scanString(speech, "us", usCount)
+    scanString(speech, "we", weCount)
+    scanString(speech, "our", ourCount)
+
+    
+
+[Testing]
+    
+Test data:
+    Test data is mostly or wholly complete. There is evidence of having traced the design for most/all of the test cases. 
+
+[Commentary]
+    Thoughtful reflection on all of the process, including improvements for the future.
+

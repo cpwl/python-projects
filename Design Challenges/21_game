@@ -1,0 +1,94 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Jack = 10
+Queen = 10
+King = 10
+Ace = 1 or 11
+
+[Pseudocode]
+Main()
+    Set userHand[1, 2] as integer, set both to 0
+    Set userScore[1, 2] as integer, set both to 0
+    Set Deck as list = 0 to 51
+    generateDeck()
+    
+    for round = 2 to 0   #for each round
+        for p = 1 to 2   #for each player
+            while userHand(p) < 21
+                shuffleDeck()
+                print "Would you like to stick or twist (stick/twist)"
+                if input = "twist"
+                    drawCard(userHand(p))
+                elseif input = "stick"
+                    break while
+                endif
+            endwhile
+
+            print "Your score was: " & userHand(p)
+        endfor
+
+
+        if userHand(1) <= 21
+            if userHand(2) <= 21
+                if userHand(1) > userHand(2)
+
+                    print "Player 1 gets 1 point!"
+                    userScore (1) = userScore(1) + 1
+
+                elseif userHand(1) < userHand(2)
+
+                    userScore(2) = userScore(2) + 1
+                    print "Player 2 gets 1 point!"
+
+                else
+                    print "Draw - no points awarded." 
+            endif
+        else
+            if userHand(2) <= 21
+                userScore(2) = userScore(2) + 1
+                print "Player 2 gets 1 point!"
+            else
+                print "Draw - no points awarded."
+
+        endif
+        print "You have ",round," rounds left"
+    
+    endfor
+
+
+end
+
+
+generateDeck:
+    for every card in Deck()
+        while 
+            randomCard = randomInteger(1 to 14)
+            if Deck contains < 4 of randomCard
+                Deck(card) = randomCard
+            endif
+        endwhile
+    endfor
+end
+
+
+shuffleDeck()
+    for every card in (Deck)
+        i = randomInteger(0 to 51)
+        temp = Deck(i)
+        Deck(i) = Deck(card)
+    endfor
+
+
+[Testing]
+    Test data is mostly or wholly complete. There is evidence of having traced the design for most/all of the test cases. 
+
+[Commentary]
+    Thoughtful reflection on all of the process, including improvements for the future.
