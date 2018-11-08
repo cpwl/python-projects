@@ -1,7 +1,7 @@
 
 [Variables]
 
-    staffID - a unique identity for each staff member, stored as 3 initials (e.g. JDS for John David Smith)
+    
     
 
 [Top level design]
@@ -10,29 +10,33 @@ Program starts - when the Paging function is selected in the till menu
 
     1: Display a menu
         Display a menu title
-        Display all staff members currently on shift at the top of the menu (by staffID)
-        Display the staffID of any staff currently being paged
+        Display all staff members currently on shift at the top of the menu
 
     2: Allow staff members to page other staff members
-        - Show a menu of available staff members (by staffID)
-        - When a staffID is selected, send an output to page that staff member
-        - Return to the main menu, this time displaying the paged staffID at the top
+        - Show a menu of available staff members
+        - When a staff name is selected, send an output to page that staff member
+        - Return to the main menu
 
-    3: Allow staff members to log into the till
-        - Take the staffID 
-        - Validate the staffID against a list of staff members that are clocked in
-        - If the staff member is currently being paged, cancel the page
-        - Set the specified member of staff to be unavailable for paging (as they are now at the bar)
+    3: Allow staff members to log in the till
+        - Take the staff name
+        - Validate the staff name against a list of staff members that are clocked in
+        - Set the staff to be unavailable for paging (as they are now at the bar)
 
-    4: Allow staff members to clock in to their shift
-        - Take the staffID
+    4: Allow staff members to log out of the till
+        - Take the staff name
+        - Validate the staff name against a list of staff members that are clocked in
+        - Set the staff to be available for paging (as they are no longer at the bar)
+
+    5: Allow staff members to clock in to their shift
+        - Take the staff name
+        - Add the staff member to the list of clocked in staff
         - Set the staff member as available to be paged
 
-    5: Allow staff members to clock out of their shift
-        - Take the staffID
-        - Remove the staffID from the list of staff on shift
-
-    6: Quit the program
+    6: Allow staff members to clock out of their shift
+        - Take the staff name
+        - Remove the staff name from the list of staff on shift
+        - Remove the staff from the available staff list if they are on it
+    7: Quit the program
 
 [Pseudocode]
 
